@@ -40,7 +40,7 @@ class SpaceXClient:
             parsed.append({
                 'name': launch.get('name'),
                 'date': launch.get('date_utc'),
-                'status': launch.get('status'),
+                'status': launch.get('status') or "No status provided",
                 'rocket': launch.get('rocket'),
                 'mission': launch.get('mission') or "No mission details provided"
             })
